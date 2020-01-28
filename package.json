@@ -1,0 +1,19 @@
+{
+	"name": "framework-lettuce",
+	"version": "1.0.3",
+	"description": "This framework is based in webdriverio",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jairo91/framework-lettuce.git"
+	},
+	"directories": {
+		"lib": "lib",
+		"test": "test"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Jairo Mendez Martin",
+	"license": "ISC"
+}
