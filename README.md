@@ -11,7 +11,7 @@ npm install node-tap --save-dev
 
 ## Framework ⌨️_
 
-### **Keywords**
+### Keywords
 **getData y setData:**
 
 _Se usan para realizar el guardado y la obtención de datos obtenidos en tiempo de ejecución. Por ejemplo. Se obtiene el texto de un elemento en pantalla y se almacena para poder comprobarlo en una pantalla posterior._
@@ -131,4 +131,105 @@ _Con estos dos Keywords, es posible hacer scroll sobre la pantalla para encontra
 Keywords.dragToFind("button"); // Mueve el ratón hasta el elemento 'button'
 Keywords.scrollIntoView("button", true); // Mueve el elemento hasta la parte superior de la pantalla
 Keywords.scrollIntoView("button", false); // Mueve el elemento hasta la parte inferior de la pantalla
+```
+
+## BrowserManager
+**debug:**
+
+_En el punto en el que se ponga este método, se realizará un punto de interrupción, hasta que se pulse dos veces Ctrl+c. Por ejemplo:_
+
+```
+Keywords.dragToFind("button");
+browserManager.debug();			//La ejecución se detendrá en este punto.
+Keywords.scrollIntoView("button", false);
+```
+
+**getUrl y getTitle:**
+
+_Obtiene la url y el título de la página en la que se esta navegando en ese momento. Por ejemplo: Se esta automatizando la web www.github.com_
+
+```
+console.log(browserManager.getUrl()); //Imprimirá: www.github.com
+console.log(browserManager.getTitle()); //Imprimirá: GitHub
+```
+
+**navigateTo:**
+
+_Realiza la acción de navegar a una url pasada por parametro. Por ejemplo: Se quiere navegar a www.github.com_
+
+```
+browserManager.navigateTo("www.github.com"); 
+```
+
+**refresh:**
+
+_Realiza la acción de refrescar la página actual. Por ejemplo:_
+
+```
+browserManager.refresh(); 
+```
+
+**forwardButton y backButton:**
+
+_Realiza la acción de pulsar el botón de retroceder y avanzar a las web anterior y posteriormente navegadas. Por ejemplo:_
+
+```
+browserManager.forwardButton();  //Navega a la pantalla siguiente
+browserManager.backButton();  //Navega a la pantalla anterior
+```
+
+**deleteCookies:**
+
+_Realiza la acción de borrar las cookies almacenadas. Es posible seleccionar las cookies que se quieren eliminar. Por ejemplo:_
+
+```
+browserManager.deleteCookies();  //Eliminará todas las cookies
+```
+
+**maximize y fullScreen:**
+
+_Es posible maximizar la pantalla o poner el navegador a pantalla completa. Por ejemplo:_
+
+```
+browserManager.maximize();  //Maximiza la pantalla al zoom 100%
+browserManager.fullScreen();  //El navegador se ejecutará en pantalla completa
+```
+
+**getSize:**
+
+_Obtiene el tamaño de la pantalla en el que se esta ejecutando. Por ejemplo:_
+
+```
+browserManager.getSize();  //Devuelve el tamaño de la pantalla en pixeles
+```
+
+**switchWindow:**
+
+_Realiza el cambio de ventana en caso de haber más de una. Cambia a una pestaña diferente a la actual. Por ejemplo:_
+
+```
+browserManager.switchWindow();  //Cambia a una pestaña que haya saltado en la ejecución de la prueba.
+```
+
+**closeWindows:**
+
+_Realiza el cierre de las pestañas, hasta que solo exista una. Por ejemplo:_
+```
+browserManager.closeWindows();  //Cierra todas las pestañas menos una.
+```
+
+**switchToFrame:**
+
+_Realiza el cambio de frame, dentro de la misma ventana. Es necesario pasar el selector del frame. Cuando no se pase el selector, se accederá a la raiz del DOM. Esperará 10 segundos por defecto, pero es posible pasarle por parametro un tiempo de espera custom. Por ejemplo:_
+
+```
+browserManager.switchToFrame("frame", 10);  //Cambia al frame con selector "frame", esperará 10s como maximo
+```
+
+**alertAccept y alertCancel:**
+
+_Estos métodos aceptan o cancelan las alertas emergentes. Por ejemplo:_
+```
+browserManager.alertAccept();  //Acepta la alerta emergente
+browserManager.alertCancel();  //Cancela la alerta emergente
 ```
