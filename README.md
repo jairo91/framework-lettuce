@@ -9,9 +9,9 @@ _Para poder usar la libreria del framework, es necesario instalarla en el proyec
 npm install node-tap --save-dev
 ```
 
-## **Framework** ⌨️_
+## Framework ⌨️_
 
-### Keywords
+### **Keywords**
 **getData y setData:**
 
 _Se usan para realizar el guardado y la obtención de datos obtenidos en tiempo de ejecución. Por ejemplo. Se obtiene el texto de un elemento en pantalla y se almacena para poder comprobarlo en una pantalla posterior._
