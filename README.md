@@ -12,6 +12,9 @@ npm install node-tap --save-dev
 ## Framework ⌨️_
 
 ### Keywords
+
+Dentro de esta libreria se pueden encontrar todos los métodos, que se usarán para interactuar con los elementos de la pantalla.
+
 **getData y setData:**
 
 _Se usan para realizar el guardado y la obtención de datos obtenidos en tiempo de ejecución. Por ejemplo. Se obtiene el texto de un elemento en pantalla y se almacena para poder comprobarlo en una pantalla posterior._
@@ -134,6 +137,9 @@ Keywords.scrollIntoView("button", false); // Mueve el elemento hasta la parte in
 ```
 
 ## BrowserManager
+
+Dentro de esta libreria se pueden encontrar todos los métodos, que se usarán para interactuar con el navegador.
+
 **debug:**
 
 _En el punto en el que se ponga este método, se realizará un punto de interrupción, hasta que se pulse dos veces Ctrl+c. Por ejemplo:_
@@ -233,3 +239,49 @@ _Estos métodos aceptan o cancelan las alertas emergentes. Por ejemplo:_
 browserManager.alertAccept();  //Acepta la alerta emergente
 browserManager.alertCancel();  //Cancela la alerta emergente
 ```
+
+##Sfdx
+Dentro de esta librería podremos encontrar métodos para realizar acciones sobre la base de datos de salesforce a través de Sfdx. Por ejemplo será posible consultar, crear, borrar o actualizar campos. 
+
+**bulkUpsert:**
+
+_Es posible realizar una actualización de datos. En caso de que el registro no exista se creará. Para usar este método, es necesario pasar por parametro el objeto de Salesforce que se tiene que modificar, el fichero csv que vamos a cargar con los datos y el externalId, que es el valor clave por el que se realizará la inserción. Por ejemplo, si se quiere cargar el siguiente csv en el objeto 'Account' con el externalId 'Name':_
+
+Name         ,MM_GBL_Identificador_unico_cliente__c ,RecordType.Name			,conf__CUSTOMER_IS_SUPPLIER_TYPE__c
+Cliente100	 ,Cliente100     						,CONF_Confirming			,Cliente
+Cliente101	 ,Cliente101     						,CONF_Confirming			,Cliente
+
+```
+sfdx.bulkUpsert("Account", "rutaCsv, "Name"); // Es necesario poner la ruta relativa o absoluta del fichero csv
+```
+
+**bulkDelete:**
+
+_Es posible realizar un borrado masivo de datos. Para usar este método, es necesario pasar por parametro el objeto de Salesforce que se tiene que modificar y el fichero csv con los datos que se quierer borrar. Por ejemplo, si se quiere borrar el siguiente csv en el objeto 'Account' con el externalId 'Name':_
+
+Name         ,MM_GBL_Identificador_unico_cliente__c ,RecordType.Name			,conf__CUSTOMER_IS_SUPPLIER_TYPE__c
+Cliente100	 ,Cliente100     						,CONF_Confirming			,Cliente
+Cliente101	 ,Cliente101     						,CONF_Confirming			,Cliente
+
+```	
+sfdx.bulkDelete("Account", "rutaCsv); // Es necesario poner la ruta relativa o absoluta del fichero csv
+```
+
+**recordDelete:**
+
+_Es posible realizar un borrado de un registro concreto. Para usar este método, es necesario pasar por parametro el objeto de Salesforce que se tiene que modificar y el fichero csv con el registro que se quierer borrar. Por ejemplo, si se quiere borrar el siguiente csv en el objeto 'Account' con el externalId 'Name':_
+
+Name         ,MM_GBL_Identificador_unico_cliente__c ,RecordType.Name			,conf__CUSTOMER_IS_SUPPLIER_TYPE__c
+Cliente100	 ,Cliente100     						,CONF_Confirming			,Cliente
+
+```	
+sfdx.bulkDelete("Account", "rutaCsv); // Es necesario poner la ruta relativa o absoluta del fichero csv
+```
+
+**soqlQuery:**
+
+_Con este método es posible realizar una query para extraer los datos que se necesiten para las pruebas. Es necesario pasarle por parametro la query que extraería los datos y el tipo de formato que queremos(csv). Por ejemplo, si se quiere obtener el Cliente100:_
+
+´´´
+soqlQuery("SELECT Id FROM Account WHERE Name='Cliente100', "csv");
+´´´
