@@ -240,7 +240,8 @@ browserManager.alertAccept();  //Acepta la alerta emergente
 browserManager.alertCancel();  //Cancela la alerta emergente
 ```
 
-##Sfdx
+## Sfdx
+
 Dentro de esta librería podremos encontrar métodos para realizar acciones sobre la base de datos de salesforce a través de Sfdx. Por ejemplo será posible consultar, crear, borrar o actualizar campos. 
 
 **bulkUpsert:**
