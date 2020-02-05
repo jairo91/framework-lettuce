@@ -182,8 +182,7 @@ exports.config = {
 	before: function (capabilities, specs) {
 		require('../../lib/commands').init(browser, true);
 	},
-
-
+	
 	/**
  	* Cucumber-specific hooks
  	*/
