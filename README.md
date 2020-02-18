@@ -11,7 +11,8 @@ npm install node-tap --save-dev
 
 ## Versions
 
-**1.1.6** Se elimina el reporte cucumber de la libreria. Para realizar una captura sobre los comandos es necesario hacerlo a través del fichero configuración de Webdriverio. pudiendo configurar si queremos captura en todas las acciones o especificamente en alguna:
+**1.1.6** 
+Se elimina el reporte cucumber de la libreria. Para realizar una captura sobre los comandos es necesario hacerlo a través del fichero configuración de Webdriverio. pudiendo configurar si queremos captura en todas las acciones o especificamente en alguna:
 ```
 lettuce: {
 	errorCommand: function(command, error){
@@ -20,6 +21,14 @@ lettuce: {
 		}
 	}
 },
+```
+
+Es posible sobrescribir los métodos nativos de browser, para usar los Keywords directamente con la variable browser. Para ello es necesario configurar en el fichero configuración de webdriverio, el siguiente before. En un inicio, esto incluye los keywords en browser. pero no remplaza las funciones nativas. En caso de querer usar comandos nativos completados con los keywords, es necesario pasar por parametro a la función init un true:
+```
+before = function () {
+	const commands = require('require('framework-lettuce/lib/commands');
+	commands.init(browser, false);
+}
 ```
 
 ## Framework ⌨️_
