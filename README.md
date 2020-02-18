@@ -9,6 +9,19 @@ _Para poder usar la libreria del framework, es necesario instalarla en el proyec
 npm install node-tap --save-dev
 ```
 
+## Versions
+
+**1.1.6** Se elimina el reporte cucumber de la libreria. Para realizar una captura sobre los comandos es necesario hacerlo a través del fichero configuración de Webdriverio. pudiendo configurar si queremos captura en todas las acciones o especificamente en alguna:
+```
+lettuce: {
+	errorCommand: function(command, error){
+		if(command==="click"){ //En caso de no seleccionarse una acción realizará en todas las acciones por defecto.
+			cucumberJson.attach(browser.takeScreenshot(), 'image/png');
+		}
+	}
+},
+```
+
 ## Framework ⌨️_
 
 ### Keywords
