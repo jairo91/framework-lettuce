@@ -6,7 +6,7 @@ _Este framework, esta basado en Webdriverio. Es posible automatizar cualquier pr
 
 _Para poder usar la libreria del framework, es necesario instalarla en el proyecto. Para instalarla, se puede conseguir lanzando el siguiente comando:_
 ```
-npm install node-tap --save-dev
+npm install framework-lettuce --save-dev
 ```
 
 ## Versions
