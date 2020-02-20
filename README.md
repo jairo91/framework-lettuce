@@ -16,6 +16,7 @@ Se elimina el reporte cucumber de la libreria. Para realizar una captura sobre l
 ```
 lettuce: {
 	errorCommand: function(command, error){
+		const cucumberJson = require('wdio-cucumberjs-json-reporter').default
 		if(command==="click"){ //En caso de no seleccionarse una acción realizará en todas las acciones por defecto.
 			cucumberJson.attach(browser.takeScreenshot(), 'image/png');
 		}
