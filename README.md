@@ -11,8 +11,9 @@ npm install framework-lettuce --save-dev
 
 ## Versions
 
-**1.1.6** 
-Se elimina el reporte cucumber de la libreria. Para realizar una captura sobre los comandos es necesario hacerlo a través del fichero configuración de Webdriverio. pudiendo configurar si queremos captura en todas las acciones o especificamente en alguna:
+### Configurar fichero configuración Webdriverio
+Para poder utilizar todas las funcionalidades de wdio-lettuce es necesario configurar una serie de parametros en el fichero de configuración. 
+
 ```
 lettuce: {
 	errorCommand: function(command, error){
@@ -20,10 +21,22 @@ lettuce: {
 		if(command==="click"){ //En caso de no seleccionarse una acción realizará en todas las acciones por defecto.
 			cucumberJson.attach(browser.takeScreenshot(), 'image/png');
 		}
-	}
+	},
+	loggerLevel: 'debug'
 },
 ```
+**errorCommand**
+Con esta función, se puede conseguir realizar una captura de pantalla en todos los comandos de wdio o en alguno concreto. Si el usuario quiere especificar en que acciones quiere realizar capturas de pantalla, es posible, aplicando solo la captura sobre el comando, como en el ejemplo. En caso de no incluir este 'if', se realizarán capturas sobre todos los comandos. 
 
+**loggerLevel**
+Mediante este parametro podemos especificar lo diferentes niveles de logger a mostrar en consola. Estos pueden ser: 
+- error 
+- warn 
+- info
+- verbose
+- debug
+
+**Overwrite commands**
 Es posible sobrescribir los métodos nativos de browser, para usar los Keywords directamente con la variable browser. Para ello es necesario configurar en el fichero configuración de webdriverio, el siguiente before. En un inicio, esto incluye los keywords en browser. pero no remplaza las funciones nativas. En caso de querer usar comandos nativos completados con los keywords, es necesario pasar por parametro a la función init un true:
 ```
 before = function () {
