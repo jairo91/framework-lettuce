@@ -10,6 +10,12 @@ npm install framework-lettuce --save-dev
 ```
 
 ## Versions
+**1.0.1**
+Features: 
+- La capacidad de poder reiniciar los datos almacenados a través de setData. Se realiza mediante el keyword: 
+```
+keywords.deleteData();
+```
 
 ### Configurar fichero configuración Webdriverio
 Para poder utilizar todas las funcionalidades de wdio-lettuce es necesario configurar una serie de parametros en el fichero de configuración. 
@@ -51,13 +57,17 @@ before = function () {
 
 Dentro de esta libreria se pueden encontrar todos los métodos, que se usarán para interactuar con los elementos de la pantalla.
 
-**getData y setData:**
+**getData, setData y deleteData:**
 
-_Se usan para realizar el guardado y la obtención de datos obtenidos en tiempo de ejecución. Por ejemplo. Se obtiene el texto de un elemento en pantalla y se almacena para poder comprobarlo en una pantalla posterior._
+_Se usan para realizar el guardado, obtención y borrado de datos obtenidos en tiempo de ejecución. Por ejemplo. Se obtiene el texto de un elemento en pantalla y se almacena para poder comprobarlo en una pantalla posterior._
 ```
 Keywords.setData("clave", "valor");
 
 console.log(Keywords.getData("clave")) //Se imprimirá por pantalla: valor
+
+Keywords.deleteData();
+
+console.log(Keywords.getData("clave")) //Se imprimirá por pantalla: null
 ```
 
 **pushOn:** 
