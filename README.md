@@ -10,6 +10,10 @@ npm install framework-lettuce --save-dev
 ```
 
 ## Versions
+**1.0.3 y 1.0.4**
+Features: 
+- Correción de errores en Keywords.
+
 **1.0.2**
 Features: 
 - La capacidad de poder reiniciar los datos almacenados a través de setData. Se realiza mediante el keyword: 
