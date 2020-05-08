@@ -10,7 +10,7 @@ npm install framework-lettuce --save-dev
 ```
 
 ## Versions
-**1.0.3 y 1.0.4**
+**1.0.3 - 1.0.5**
 Features: 
 - Correción de errores en Keywords.
 
