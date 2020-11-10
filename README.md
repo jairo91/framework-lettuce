@@ -336,3 +336,22 @@ _Con este método es posible realizar una query para extraer los datos que se ne
 ´´´
 soqlQuery("SELECT Id FROM Account WHERE Name='Cliente100', "csv");
 ´´´
+
+## Sfdx
+
+**sendMessage:**
+
+_Con este método es posible enviar un correo desde gmail, a través de la API. Para ello es necesario configurar lo siguiente: 
+Crear una carpeta dentro de la carpeta test, con la siguiente estructura /general/credentials/"NombreTipoUsuario"/. Dentro de esta carpeta habrá que insertar los credentials y el token, generados para el usuario seleccionado.
+
+Para poder usar esto, es necesario hacer la siguiente llamada: 
+
+´´´
+Gmail.sendMessage({
+			typeUser:"contactUser",
+			To: "correoTo@gmail.com",
+			From: "correoFrom@gmail.com",
+			Subject: "Subject",
+			Body: "Message"
+		});
+´´´

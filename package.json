@@ -26,6 +26,7 @@
 		"@wdio/sync": "^5.15.7",
 		"fs-extra": "^8.1.0",
 		"webdriverio": "^5.16.0",
-		"xmlhttprequest": "^1.8.0"
+		"xmlhttprequest": "^1.8.0",
+		"googleapis": "^64.0.0"
 	}
 }
