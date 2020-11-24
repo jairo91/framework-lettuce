@@ -10,6 +10,10 @@ npm install framework-lettuce --save-dev
 ```
 
 ## Versions
+**1.0.5 - 1.0.7**
+Features: 
+- Tratamiento de fechas con dos nuevos métodos en el modulo dates. ("dateResting" y "formatDay")
+
 **1.0.3 - 1.0.5**
 Features: 
 - Correción de errores en Keywords.
