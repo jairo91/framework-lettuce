@@ -10,9 +10,11 @@ npm install framework-lettuce --save-dev
 ```
 
 ## Versions
-**6.0.1**
+**6.0.1- 6.0.4**
 Features: 
 - Incluir el método uploadFile, para poder subir ficheros a una web.
+- Actualización método wait()
+
 **6.0.0**
 Features: 
 - Actualización de webdriverio a la versión v6. A partir de ahora el verisonado se corresponderá con la versión de webdriverio.
