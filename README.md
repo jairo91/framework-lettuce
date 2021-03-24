@@ -10,6 +10,16 @@ npm install framework-lettuce --save-dev
 ```
 
 ## Versions
+**6.0.1**
+Features: 
+- Incluir el método uploadFile, para poder subir ficheros a una web.
+**6.0.0**
+Features: 
+- Actualización de webdriverio a la versión v6. A partir de ahora el verisonado se corresponderá con la versión de webdriverio.
+**6.0.0**
+Features: 
+- Actualización de webdriverio a la versión v6. A partir de ahora el verisonado se corresponderá con la versión de webdriverio.
+
 **1.0.5 - 1.0.7**
 Features: 
 - Tratamiento de fechas con dos nuevos métodos en el modulo dates. ("dateResting" y "formatDay")
@@ -188,6 +198,13 @@ _Con estos dos Keywords, es posible hacer scroll sobre la pantalla para encontra
 Keywords.dragToFind("button"); // Mueve el ratón hasta el elemento 'button'
 Keywords.scrollIntoView("button", true); // Mueve el elemento hasta la parte superior de la pantalla
 Keywords.scrollIntoView("button", false); // Mueve el elemento hasta la parte inferior de la pantalla
+```
+
+**uploadFile**
+
+_Con este método es posible subir un fichero desde una ruta local a un elemento de una web. Por ejemplo:_
+```
+Keywords.uploadFile("input", "PATH/fileToUpload); // carga el fichero ubicado en PATH/fileToUpload en el elemento "Input"
 ```
 
 ## BrowserManager
