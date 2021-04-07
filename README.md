@@ -160,6 +160,14 @@ Keywords.isNotPresent("//button", 15); // Comprueba que un elemento no esta pres
 Keywords.isDisplayed("//button", 20); // Comprueba que un elemento esta mostrandose en pantalla.
 ```
 
+**isClickable y isNotClickable:**
+
+_Realiza una verificación de que un elemento es o no es clickable. Por ejemplo
+```
+Keywords.isClickable("//button", 10); // Comprueba que un elemento es posible hacer click sobre el.
+Keywords.isNotClickable("//button", 15);  // Comprueba que un elemento NO es posible hacer click sobre el.
+```
+
 **exists y notExists:**
 
 _Comprueba si un elemento esta o no esta en pantalla. En este caso, no lanza una excepción sino que devuelve un booleano true o false. Por ejemplo: Un button con el texto "Login" se muestra en pantalla_ 
