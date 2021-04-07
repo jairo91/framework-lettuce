@@ -10,6 +10,11 @@ npm install framework-lettuce --save-dev
 ```
 
 ## Versions
+**1.0.10**
+Features: 
+- incluir metodos isClickable y isNotClickable
+- Incluir metodo para subir un fichero con updateFile
+
 **1.0.3 - 1.0.9**
 Features: 
 - Correción de errores en Keywords.
@@ -143,6 +148,14 @@ _Realiza una verificación de que un elemento esta presente en pantalla. En caso
 Keywords.isPresent("//button", 10); // Comprueba que un elemento esta presente en el DOM.
 Keywords.isNotPresent("//button", 15); // Comprueba que un elemento no esta presente en el DOM.
 Keywords.isDisplayed("//button", 20); // Comprueba que un elemento esta mostrandose en pantalla.
+```
+
+**isClickable y isNotClickable:**
+
+_Realiza una verificación de que un elemento es o no es clickable. Por ejemplo
+```
+Keywords.isClickable("//button", 10); // Comprueba que un elemento es posible hacer click sobre el.
+Keywords.isNotClickable("//button", 15);  // Comprueba que un elemento NO es posible hacer click sobre el.
 ```
 
 **exists y notExists:**
