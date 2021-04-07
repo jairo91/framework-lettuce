@@ -10,8 +10,9 @@ npm install framework-lettuce --save-dev
 ```
 
 ## Versions
-**6.0.1- 6.0.4**
+**6.0.1- 6.0.5**
 Features: 
+- Incluir metodo isClickable and isNotClickable
 - Incluir el método uploadFile, para poder subir ficheros a una web.
 - Actualización método wait()
 
