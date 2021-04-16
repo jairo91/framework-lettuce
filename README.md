@@ -10,9 +10,10 @@ npm install framework-lettuce --save-dev
 ```
 
 ## Versions
-**6.0.1- 6.0.5**
+**6.0.1- 6.0.6**
 Features: 
 - Incluir metodo isClickable and isNotClickable
+- Incluir metodo isEnabled and isNotEnabled
 - Incluir el método uploadFile, para poder subir ficheros a una web.
 - Actualización método wait()
 
@@ -167,6 +168,14 @@ _Realiza una verificación de que un elemento es o no es clickable. Por ejemplo
 ```
 Keywords.isClickable("//button", 10); // Comprueba que un elemento es posible hacer click sobre el.
 Keywords.isNotClickable("//button", 15);  // Comprueba que un elemento NO es posible hacer click sobre el.
+```
+
+**isEnabled y isNotEnabled:**
+
+_Realiza una verificación de que un elemento esta o no esta habilitado. Por ejemplo
+```
+Keywords.isEnabled("//button", 10); // Comprueba que un elemento esta habilitado o no
+Keywords.isNotEnabled("//button", 15);  // Comprueba que un elemento NO esta habilitado
 ```
 
 **exists y notExists:**
