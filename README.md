@@ -10,11 +10,12 @@ npm install framework-lettuce --save-dev
 ```
 
 ## Versions
-**1.0.10-1.0.11**
+**1.0.10-1.0.12**
 Features: 
 - incluir metodos isClickable y isNotClickable
 - Incluir metodo para subir un fichero con updateFile
 - Incluir librerias googleapi
+- Incluir formato en dateResting()
 
 **1.0.3 - 1.0.9**
 Features: 
